@@ -82,3 +82,27 @@ while run:
   pepe_rect.y += random.randint(5,10)
   pepe_rect1.x -= random.randint(5,10)
   pepe_rect1.y -= random.randint(5,10)
+  
+  if pepe_rect.x >= 782:
+    pepe_rect.x = -12
+  elif pepe_rect.x <= -12:
+    pepe_rect.x = 782
+  if pepe_rect.y >= 408:
+    pepe_rect.y = -12
+  elif pepe_rect.y <= -12:
+    pepe_rect.y = 408
+  if pepe_rect1.x >= 782:
+    pepe_rect1.x = -12
+  elif pepe_rect1.x <= -12:
+    pepe_rect1.x = 782
+  if pepe_rect1.y >= 408:
+    pepe_rect1.y = -12
+  elif pepe_rect1.y <= -12:
+    pepe_rect1.y = 408
+    
+
+  if run == False:
+    screen.fill((0,0,0))
+    screen.blit(bg, (0,0))
+    screen.blit(alex, (alex_rect.x, alex_rect.y))
+    pygame.display.update()    
