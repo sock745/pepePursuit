@@ -52,3 +52,33 @@ while run:
   
   draw()
   quit_game()
+    #print (str(alex_rect.x) + " , " + str(alex_rect.y)
+  
+  userInput = pygame.key.get_pressed()
+  if userInput[pygame.K_a]:
+    alex_rect.x-= speed
+  if userInput[pygame.K_d]:
+    alex_rect.x += speed
+  if userInput[pygame.K_w]:
+    alex_rect.y -= speed
+  if userInput[pygame.K_s]:
+    alex_rect.y += speed
+  #782 x
+#-51 x
+
+# -17 y
+# 408 y
+  if alex_rect.x >= 782:
+    alex_rect.x = -10
+  elif alex_rect.x <= -10:
+    alex_rect.x = 782
+
+  if alex_rect.y >= 408:
+    alex_rect.y = -10
+  elif alex_rect.y <= -10:
+    alex_rect.y = 408
+
+  pepe_rect.x += random.randint(5,10)
+  pepe_rect.y += random.randint(5,10)
+  pepe_rect1.x -= random.randint(5,10)
+  pepe_rect1.y -= random.randint(5,10)
